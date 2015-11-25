@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2015-11-23 21:40-03:00\n"
-"PO-Revision-Date: 2015-11-23 21:40-03:00\n"
+"POT-Creation-Date: 2015-11-24 21:51-03:00\n"
+"PO-Revision-Date: 2015-11-24 21:51-03:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1008,7 +1008,7 @@ msgstr ""
 
 #: Controllers\PaymentController.cs:322
 #: Views\Listing\Listings.cshtml:77
-#: Views\Listing\_ListingPayment.cshtml:25
+#: Views\Listing\_ListingPayment.cshtml:27
 #: Views\Payment\Payment.cshtml:44
 #: obj\Release\Package\PackageTmp\Views\Listing\Listings.cshtml:77
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingPayment.cshtml:25
@@ -2447,7 +2447,7 @@ msgstr ""
 
 #: Controllers\PaymentController.cs:322
 #: Views\Listing\Listings.cshtml:78
-#: Views\Listing\_ListingPayment.cshtml:28
+#: Views\Listing\_ListingPayment.cshtml:30
 #: Views\Payment\Payment.cshtml:51
 #: obj\Release\Package\PackageTmp\Views\Listing\Listings.cshtml:78
 #: obj\Release\Package\PackageTmp\Views\Listing\_ListingPayment.cshtml:28

@@ -1,5 +1,23 @@
 ﻿@model BeYourMarket.Model.Models.Listing
 
+@using MercadoPago;
+@using System.Collections;
+
+@{
+    Mp mp = new MP("1867551792226894", "YVLsLzQweWR2W5jib9SkJ048u6rKKCaI");
+
+    String preferenceData = "{\"items\":" +
+        "[{" +
+            "\"title\":\"Multicolor kite\"," +
+            "\"quantity\":1," +
+            "\"currency_id\":\"ARS\"," +
+            "\"unit_price\":10.0" +
+        "}]" +
+    "}";
+
+    Hashtable preference = mp.createPreference(preferenceData);
+}
+
 @if (RazorHelper.IsPaymentSupport() && Model.OrderAllowed)
 {
     <div class="panel panel-default panel-body mrg-t">
