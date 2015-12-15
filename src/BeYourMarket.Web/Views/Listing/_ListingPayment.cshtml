@@ -4,7 +4,7 @@
 @using System.Collections;
 
 @{
-    Mp mp = new MP("1867551792226894", "YVLsLzQweWR2W5jib9SkJ048u6rKKCaI");
+    MP mp = new MP("1867551792226894", "YVLsLzQweWR2W5jib9SkJ048u6rKKCaI");
 
     String preferenceData = "{\"items\":" +
         "[{" +
@@ -50,6 +50,8 @@
             {
                 <input type="text" class="form-control" id="Quantity" name="Quantity" data-rule-required="true" data-rule-number="true" data-rule-min="0" />
             }
+            
+            <a href="@preference["response"]["init_point"]">Pay</a>
 
             <button class="btn btn-primary btn-block">@Model.ListingType.ButtonLabel</button>
         </form>
