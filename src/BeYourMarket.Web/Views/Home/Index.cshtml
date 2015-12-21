@@ -16,6 +16,40 @@
 
 }
 
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#modal-container-362810').modal('show');
+    });
+
+    function stopvideo()
+    {
+        //revisar
+        //https://developers.google.com/youtube/iframe_api_reference?hl=es
+        
+        $('#player')[0].stopVideo();
+    }
+</script>
+
+<div class="modal fade" id="modal-container-362810" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button onclick="stopvideo()" type="button" id="bntcerrar" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>              
+            </div>
+            <div class="modal-body">
+                <iframe id="player" width="640" height="360" src="https://www.youtube.com/v/LNRnXUlM1mU?version=3&enablejsapi=1&showinfo=0&autohide=1&autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+          
+        </div>
+
+    </div>
+
+</div>
+
 <div class="landing-bg jumbotron text-center" style="@bgCss">
     <div class=" container" style="margin: 0 auto; max-width: 60em;">
         <h1>@CacheHelper.Settings.Slogan</h1>
@@ -27,7 +61,6 @@
     </div>
 </div>
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/LNRnXUlM1mU?showinfo=0&autohide=1&autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
 
 <div class="container-fluid body-content">
     <div class="row">
