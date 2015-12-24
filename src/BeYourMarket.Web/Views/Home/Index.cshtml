@@ -17,33 +17,98 @@
 }
 
 <script type="text/javascript">
+
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',           
+            videoId: 'LNRnXUlM1mU',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+
+        var ifr = $("iframe");
+        if (ifr != null) {
+            ifr.css('padding-right', '0px');
+            ifr.css('padding-left', '0px');
+        }
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+      
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+        //if (event.data == YT.PlayerState.PLAYING && !done) {
+        //    setTimeout(stopVideo, 6000);
+        //    done = true;
+        //}
+
+      
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+
+
     $(window).load(function () {
         $('#modal-container-362810').modal('show');
+        $('#modal-container-362810').click(function ()
+        {
+            stopVideo();
+        });
+      
     });
 
-    function stopvideo()
-    {
+    function pararVideo() {
         //revisar
+
+        stopVideo();
         //https://developers.google.com/youtube/iframe_api_reference?hl=es
-        
-        $('#player')[0].stopVideo();
+
+      
     }
 </script>
 
 <div class="modal fade" id="modal-container-362810" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog" style="width: 640px">
+        <div class="modal-content" style="width:640px">
+            @*<div class=" modal-header">
 
-                <button onclick="stopvideo()" type="button" id="bntcerrar" class="close" data-dismiss="modal" aria-hidden="true">
-                    ×
-                </button>              
-            </div>
-            <div class="modal-body">
-                <iframe id="player" width="640" height="360" src="https://www.youtube.com/v/LNRnXUlM1mU?version=3&enablejsapi=1&showinfo=0&autohide=1&autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>
+            <button onclick="pararVideo()" type="button" id="bntcerrar" class="close" data-dismiss="modal" aria-hidden="true">
+                ×
+            </button>
+        </div>*@
+            <div class="modal-body" style="width:640px;height: 390px; padding:0">
+                @*<iframe id="player" width="640" height="360" src="https://www.youtube.com/v/LNRnXUlM1mU?version=3&enablejsapi=1&showinfo=0&autohide=1&autoplay=1&controls=0" frameborder="0" allowfullscreen></iframe>*@
+
+
+
+                <div class="container-fluid" id="player"></div>
+
+
+
+
 
             </div>
-          
+
         </div>
 
     </div>
