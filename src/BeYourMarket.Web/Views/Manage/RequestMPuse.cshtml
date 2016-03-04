@@ -1,0 +1,46 @@
+﻿@{
+  
+}
+
+<div class="body-content container-fluid">
+    <div class="main-section row">
+        <div class="container-fluid mrg-tb">
+
+            @Html.Partial("_DashBoardSide", "RequestMPuse")
+
+            <div class=" col-md-9">
+                <div id="myTabContent" class="tab-content ">
+                    <div role="tabpanel" class="tab-pane card-content fade active in" id="listings" aria-labelledby="listings-tab">
+                        <div class="panel panel-default">
+                            <!-- Default panel contents -->
+                            <div class="panel-heading">
+                                [[[Payment Settings]]]
+                            </div>
+                            <div class="panel-body">
+                                <h4>
+                                    <i class="fa fa-gears"></i> [[[MercadoPago Settings]]]
+                                </h4>
+                                <hr />
+                                <h5>
+                                    [[[Payout information]]]
+                                </h5>
+
+                                <p>
+                                    @*<a href="https://auth.mercadopago.com.ar/authorization?client_id=1867551792226894&response_type=code&platform_id=mp&redirect_uri=http%3A%2F%2Flocalhost:29398/en/api/mercadopagoapi/usercredential?code=AUTHORIZATION_CODE" class="btn btn-default" type="button"><span>Enable MercadoPago</span></a>*@                                   
+                                    <a href="https://auth.mercadopago.com.ar/authorization?client_id=1867551792226894&response_type=code&platform_id=mp&redirect_uri=http://localhost:29398/en/manage/requestmpuse" class="btn btn-default" type="button"><span>Enable MercadoPago</span></a>
+                                    
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="https://www.mercadopago.com/org-img/jsapi/mptools/buttons/render.js"></script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

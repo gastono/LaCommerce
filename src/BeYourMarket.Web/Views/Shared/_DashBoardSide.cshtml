@@ -13,7 +13,8 @@
         @if (RazorHelper.IsPaymentSupport()) { 
             <li class="@( Model == "orders" ? "active" : null )"><a href="@Url.Action("Orders", "Payment")"><i class="fa fa-shopping-cart"></i> [[[Orders]]]</a></li>
             <li class="@( Model == "transaction" ? "active" : null )"><a href="@Url.Action("Transaction", "Payment")"><i class="fa fa-dollar"></i> [[[Transactions]]]</a></li>
-            <li class="@( Model == "payment" ? "active" : null )"><a href="@Url.Action("PaymentSetting", "Payment")"><i class="fa fa-gears"></i> [[[Payments]]]</a></li>
+            @*<li class="@( Model == "payment" ? "active" : null )"><a href="@Url.Action("PaymentSetting", "Payment")"><i class="fa fa-gears"></i> [[[Payments]]]</a></li>*@
+             <li class="active"><a href="@Url.Action("RequestMPuse", "Manage")"><i class="fa fa-gears"></i> [[[Payments]]]</a></li>
         }
 
         <li class="@( Model == "profile" ? "active" : null )"><a href="@Url.Action("UserProfile", "Manage")"><i class="fa fa-user"></i> [[[Profile]]]</a></li>
@@ -23,7 +24,10 @@
         @if (User.IsInRole("Administrator"))
         {
             <li><a target="_blank" href="@Url.Action("Manage", "Admin")"><i class="fa fa-desktop"></i> [[[Admin]]]</a></li>
-        }
+        }        
+       
+
+       
 
     </ul>
 </div>

@@ -289,6 +289,10 @@ namespace BeYourMarket.Web.Controllers
             return RedirectToAction("Index", new { Message = ManageMessageId.RemovePhoneSuccess });
         }
 
+        public ActionResult RequestMPuse()
+        {
+            return View();
+        }
         //
         // GET: /Manage/ChangePassword
         public ActionResult ChangePassword()
